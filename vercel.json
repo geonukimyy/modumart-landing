@@ -1,8 +1,16 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "routes": [
-    { "src": "/payment/(success|fail)\\.html", "status": 410 },
-    { "src": "/payment/(success|fail)$", "status": 410 }
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/app-ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    }
   ]
 }
